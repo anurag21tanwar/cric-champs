@@ -1,0 +1,30 @@
+<% content_for :title, "Cric Champs — Book Cricket Camps for Kids" %>
+
+<section class="hero">
+  <h1>Give your kid the summer of cricket they'll remember.</h1>
+  <p class="lead">Find, book, and manage cricket camps run by certified coaches — all in one place.</p>
+
+  <div class="cta">
+    <% if authenticated? %>
+      <%= link_to "You're signed in as #{Current.user.email_address}", root_path, class: "btn btn-primary" %>
+    <% else %>
+      <%= link_to "Get started free", new_registration_path, class: "btn btn-primary" %>
+      <%= link_to "Sign in", new_session_path, class: "btn btn-outline" %>
+    <% end %>
+  </div>
+</section>
+
+<section class="features">
+  <div class="feature">
+    <h3>Certified coaches</h3>
+    <p>Every camp is run by background-checked, certified cricket coaches.</p>
+  </div>
+  <div class="feature">
+    <h3>Flexible scheduling</h3>
+    <p>Weekday, weekend, and school-holiday camps for every age group.</p>
+  </div>
+  <div class="feature">
+    <h3>Easy booking</h3>
+    <p>Reserve a spot in minutes and manage everything from your account.</p>
+  </div>
+</section>
